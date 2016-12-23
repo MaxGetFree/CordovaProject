@@ -6,11 +6,6 @@ document.addEventListener("DOMContentLoaded",function(){
 
 document.addEventListener("deviceready",function(){findContact("")},false);
 
-
-
-//document.getElementById("Search").addEventListener("input",function(){findContact(document.getElementById("Search").value)});
-
-
 function addContact(){
 
     var contact = navigator.contacts.create({"displayName": document.getElementById("Contact").value});
