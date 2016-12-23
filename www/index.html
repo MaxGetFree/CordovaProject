@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+    <head>
+        <title>Contact List</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <style>
+            /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+            @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+            @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+        </style>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/app.css">
+        <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+        <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+        <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+    </head>
+
+    <body>
+        <div class="page-header">
+            <h2>Телефонный справочник</h2>
+        </div>
+
+        <div class="app">
+            <h4 align="center"> Добавление контакта </h4>
+            Имя:
+            <input id="Contact" class="form-control"> 
+            Номер телефона:
+            <input id="Telephone" class="form-control">
+            <br>
+            <button id ="addContact" class="btn btn btn-primary">Добавить контакт</button>
+        </div>
+        <div class="page-header">
+            <h4 align="center"> Список контактов </h4>
+        </div>
+        <div class="app">
+            <input id="Search" class="form-control" placeholder="Search...">
+            <table id="list"> </table>
+        </div>
+        
+    
+        
+
+
+
+    </body>
+</html>
